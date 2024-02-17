@@ -1,0 +1,126 @@
+// Wor -02 
+// Author name-> Himanshu Pokhriyal
+// Date->17 feb,2024
+
+// Question On Doubly-bLinked List from online coding platforms:
+
+// Question-01) https://www.codingninjas.com/studio/problems/introduction-to-doubly-linked-list_8160413?utm_source=youtube&utm_medium=affiliate&utm_campaign=Codestudio_Linkedlistseries&leftPanelTabValue=SUBMISSION
+
+// Problem statement
+// You are given an array ‘Arr’ of size ‘N’ consisting of positive integers.
+// Your task is to make a doubly linked list from the array and return the head of the linked list.
+// Here, the head of the doubly linked list is the first element of the array, and the tail of the doubly linked list is the last element.
+
+// Solution:
+/*
+ * Definition for doubly-linked list.
+ * class Node
+ * {
+ * public:
+ *    int data;
+ *    Node *next, *prev;
+ *    Node() : data(0), next(nullptr), prev(nullptr) {}
+ *    Node(int x) : data(x), next(nullptr), prev(nullptr) {}
+ *    Node(int x, Node *next, Node *prev) : data(x), next(next), prev(prev) {}
+ * };
+ */
+
+// Node* constructDLL(vector<int>& arr) {
+//     Node* head = new Node(arr[0]);
+//     Node* prev=head;
+//     for( int i=1;i<arr.size();i++){
+//         Node* temp=new Node(arr[i],nullptr,prev);
+
+//         prev->next=temp;
+//         prev=temp;
+//     }
+//     return  head;
+// }
+
+// After this question:
+// Exp->7814 (Coding Ninjas)
+
+// Question-2)-https://www.codingninjas.com/studio/problems/insert-at-end-of-doubly-linked-list_8160464?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf&leftPanelTabValue=SUBMISSION
+
+// Problem statement
+// A doubly-linked list is a data structure that consists of sequentially linked nodes, and the nodes have reference to both the previous and the next nodes in the sequence of nodes.
+// Given a doubly-linked list and a value ‘k’, insert a node having value ‘k’ at the end of the doubly linked list.
+// Note:
+// You need not print anything. You’re given the head of the linked list. Return the head of the modified list.
+
+// Solution:
+/**
+ * Definition of doubly linked list:
+ *
+ * struct Node {
+ *      int value;
+ *      Node *prev;
+ *      Node *next;
+ *      Node() : value(0), prev(nullptr), next(nullptr) {}
+ *      Node(int val) : value(val), prev(nullptr), next(nullptr) {}
+ *      Node(int val, Node *p, Node *n) : value(val), prev(p), next(n) {}
+//  * };
+//  *
+//  *************************************************************************/
+
+// Node * insertAtTail(Node *head, int k) {
+//     // Write your code here
+//     if(head == nullptr){
+//         return new Node(k);
+//     }
+//     Node* tail = head;
+//     while(tail->next != nullptr){
+//         tail=tail->next;
+
+//     }
+//     Node* newtail=new Node(k,nullptr,tail);
+//     tail->next=newtail;
+
+
+// return head;
+// }
+
+// After this question:
+// Exp->7854 (Coding Ninjas)
+
+// Question-3) https://www.codingninjas.com/studio/problems/delete-last-node-of-a-doubly-linked-list_8160469?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf&leftPanelTabValue=SUBMISSION
+
+// Problem statement
+// A doubly-linked list is a data structure that consists of sequentially linked nodes, and the nodes have reference to both the previous and the next nodes in the sequence of nodes.
+// Given a doubly-linked list, delete the node at the end of the doubly linked list.
+// Note:
+// You need not print anything. You’re given the head of the linked list, just return the head of the modified list.
+
+// Solution:
+
+/**
+ * Definition of doubly linked list:
+ *
+ * struct Node {
+ *      int data;
+ *      Node *prev;
+ *      Node *next;
+ *      Node() : data(0), prev(nullptr), next(nullptr) {}
+ *      Node(int val) : data(val), prev(nullptr), next(nullptr) {}
+ *      Node(int val, Node *p, Node *n) : data(val), prev(p), next(n) {}
+ * };
+ *
+ *************************************************************************/
+
+// Node * deleteLastNode(Node *head) {
+//     // Write your code here
+//     if(head == nullptr || head->next == nullptr) return nullptr;
+//     Node* tail=head;
+//     while (tail->next != nullptr) {
+//         tail = tail->next;
+//     }
+//     Node* previous=tail->prev;
+//     previous->next=nullptr;
+//     tail->prev=nullptr;
+//     delete tail;
+
+//     return head;
+// }
+
+// After this question:
+// Exp->7894 (Coding Ninjas)
